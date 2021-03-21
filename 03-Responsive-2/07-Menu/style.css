@@ -27,6 +27,7 @@ body {
 .logo {
 	font-weight: bold;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 a {
@@ -35,9 +36,51 @@ a {
 	color: #e74c3c;
 	display: block;
 	padding: 10px 20px;
+	text-align: center;
 }
 
 a:hover {
 	background-color: #e74c3c;
 	color: white;
+}
+
+
+.menu li{
+	list-style: none;
+	margin-bottom: 2px;
+}
+
+.menu ul{
+	padding-left: 0;
+	margin: 0;
+}
+
+@media screen and (min-width: 640px){
+	.menu ul{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.menu li{
+		flex-basis: calc((100% - 6px) / 4);
+	}
+
+}
+
+@media screen and (min-width: 1000px){
+	header{
+		display: flex;
+		justify-content: space-between;
+	}
+	
+	/* Nevím jak to jinak vyřešit. Chtěla jsem, aby to zdědilo vlastnost z rozlišení 640px. */
+	.menu li{
+		margin-right: 2px;
+	}
+
+	.logo {
+		padding-bottom: 0;
+		padding-top: 10px;
+	}
+	
 }
